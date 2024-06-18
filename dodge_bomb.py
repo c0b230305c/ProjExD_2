@@ -65,9 +65,9 @@ def main():
 
         bb_rct.move_ip(vx, vy)
         yoko, tate = check_bound(bb_rct)
-        if not yoko:
+        if not yoko:  #横にはみ出たら
             vx *= -1
-        if not tate:
+        if not tate:  #縦にはみ出たら
             vy *= -1
         screen.blit(bb_img, bb_rct)
         pg.display.update()
